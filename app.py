@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 import gspread
 from google.oauth2.service_account import Credentials
+import boto3
+import botocore
 import json
 import urllib.request
 
