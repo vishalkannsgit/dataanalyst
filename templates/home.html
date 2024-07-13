@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="static/css/styles.css">
+        <title>Vishal Kanna - Data Analyst</title>
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <a href="#" class="nav__logo">Vishal</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="{{ url_for('home') }}" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="{{ url_for('about') }}" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="{{ url_for('portfolio') }}" class="nav__link">Portfolio</a></li>
+                        <li class="nav__item"><a href="{{ url_for('diary') }}" class="nav__link">Diary</a></li>
+                        <!--<li class="nav__item"><a href="{{ url_for('blog') }}" class="nav__link">Blog</a></li>
+                        <li class="nav__item"><a href="{{ url_for('contact') }}" id="contact-btn" class="nav__link">Contact Now</a></li>-->
+                    </ul>
+                </div>
+
+                <div class="nav__actions">
+                    <div class="nav__toggle" id="nav-toggle">
+                        <img src="assets/icons/bx-chevron-down.svg" alt="">
+                    </div>
+                    <a href="{{ url_for('contact') }}" class="nav__btn">Contact</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- HOME -->
+        <main class="l-main bd-grid">
+            <section class="home">
+                <div class="home__data">
+
+                    <h1 class="home__title">Inspiration</h1>
+                    <p class="home__description"><h3>20 years to build a reputation minutes to<br><!-- GSAP --> ruin it with a cyber-incident. </p></h3>
+                </div>
+    
+                <div class="home__img">
+                    <!-- IMG -->
+                    <img src="static/images/cat.png" alt="" class="airpod1">
+                    
+                </div>
+    
+                <div class="home__scroll">
+                    <span class="home__scroll-text">Scroll down for more</span>
+                    <a href="#l-section"><img src="assets/icons/bx-mouse.svg" alt="" class="home__scroll-icon"></a>
+                </div>
+            </section>
+
+            <!-- DETAILS AIRPODS -->
+            <section class="l-section" id="l-section">
+                <div class="details">
+                    <div class="details__content">
+                        <div class="details__box">
+                            <span class="details__initial">Python Developer | Data Analyst</span>
+                            <h3 class="details__title">VISHAL KANNA B <span> </span></h3>
+                            <p> With <span style="color:red">&#10084;</span> by Vishal kanna </a></p>
+                        </div>
+                        <!--<div class="details__box">
+                            <span class="details__initial">Hasta</span>
+                            <h3 class="details__title">5<span> h</span></h3>
+                            <p class="details__description">de batería con<br> una sola carga</p>
+                        </div>
+                        <div class="details__box">
+                            <span class="details__initial">Sólo</span>
+                            <h3 class="details__title">15<span> min</span></h3>
+                            <p class="details__description">de carga equivalen<br> a hasta 3 horas de<br> audio</p>
+                        </div>
+                    </div>-->
+
+                    <div class="details__img">
+                        <img src="assets/img/airpods.png" alt="" class="airpods">
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- GSAP -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+
+        <!-- TIMELINE MAX -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineMax.min.js"></script>
+
+        <!-- SCROLLMAGIC -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script>
+        
+        <!-- MAIN -->
+        <script src="static/js/scripts.js"></script>
+    </body>
+</html>

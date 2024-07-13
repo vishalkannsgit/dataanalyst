@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="static/css/about.css" rel="stylesheet">
+    <script src="https://unpkg.com/framer-motion/dist/framer-motion.js"></script>
+</head>
+<body class="bg-white text-gray-900">
+    <nav class="flex justify-between items-center p-4 bg-white shadow-md">
+        <div class="flex items-center space-x-4">
+        </div>
+        <ul class="flex space-x-6">
+            <li><a href="{{ url_for('home') }}" class="hover:text-blue-500">Home</a></li>
+            <li><a href="{{ url_for('about') }}" class="hover:text-blue-500">About</a></li>
+            <li><a href="{{ url_for('portfolio') }}" class="hover:text-blue-500">Portfolio</a></li>
+            <li><a href="{{ url_for('diary') }}" class="hover:text-blue-500">Diary</a></li>
+           <!-- <li><a href="{{ url_for('blog') }}" class="hover:text-blue-500">Blog</a></li>-->
+        </ul>
+    </nav>
+
+    <div class="flex flex-col md:flex-row items-center justify-center min-h-screen p-4">
+        <div class="relative flex-1 flex items-center justify-center profile-container">
+            <img src="static/images/port/about.jpeg" alt="Profile Picture" class="w-1/2 md:w-2/5 rounded-full shadow-lg">
+           <!-- <div class="social-icons absolute flex space-x-4">
+                <a href="#"><img src="github.png" alt="GitHub" class="w-8 h-8"></a>
+                <a href="#"><img src="linkedin.png" alt="LinkedIn" class="w-8 h-8"></a>
+                <a href="#"><img src="twitter.png" alt="Twitter" class="w-8 h-8"></a>
+            </div>-->
+        </div>
+        <div class="flex-1 p-6 text-center md:text-left">
+            <h3 class="text-4xl md:text-6xl font-bold mb-4">Turning Vision Into Reality With Code And Design.</h3>
+            <p class="text-lg mb-6"><span style="font-weight: bold; font-size: 1.2em; color: #970707;">Hey there!</span> I'm <span style="color: #FF6347;">Vishal Kanna</span>, a passionate coder and creative soul from Namakkal, India. Ever since I can remember, I've been enthralled by the magical blend of <span style="font-style: italic; color: #20B2AA;">art</span> and <span style="font-style: italic; color: #20B2AA;">technology</span>, finding joy in transforming ideas into digital wonders. My journey, from tinkering with gadgets to mastering data analysis and visualization, has been an exhilarating adventure. My days weren't just about hitting the books but also about making lifelong friends and shining in hackathons. Beyond the screen, I'm an aficionado of <span style="font-style: italic; color: #8A2BE2;">music</span> and <span style="font-style: italic; color: #8A2BE2;">digital art</span>, finding inspiration in every beat and brushstroke. Volunteering in my community, teaching programming to underprivileged students, has been a humbling experience that underscores the transformative power of knowledge. Life, for me, is a canvas of endless possibilities, and I am excited to continue this journey, turning visions into reality, one line of code at a time.
+            </p>
+            <div class="profile-container">
+                <div class="flex justify-center md:justify-start space-x-4">
+                    <a href="{{ url_for('static', filename='images/VISHAL_KANNA_B (1).pdf') }}" class="btn" target="_blank">Resume</a>
+                    <a href="{{ url_for('portfolio') }}" class="btn">Contact</a>
+                </div>
+            </div>
+            
+            <!-- Runner Section -->
+            <div class="runner">
+                <img src="static/images/runner/python.svg" alt="Image 1">
+                <img src="static/images/runner/flask.svg" alt="Image 2">
+                <img src="static/images/runner/github.svg" alt="Image 3">
+                <img src="static/images/runner/linux.svg" alt="Image 4">
+                <img src="static/images/runner/mysql.svg" alt="Image 5">
+                <img src="static/images/runner/power-bi.svg" alt="Image 6">
+                <img src="static/images/runner/statistics.svg" alt="Image 7">
+                
+            </div>
+            
+            <div class="footer">
+                <p>&copy; 2024 Vishal Kanna. All rights reserved.</p>
+            </div>
+
+    <script src="static/js/runner.js"></script>
+</body>
+</html>

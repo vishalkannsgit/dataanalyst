@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact/navbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact/footer.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/codecell_logo.svg') }}" type="image/x-icon" sizes="any">
+    <script defer src="{{ url_for('static', filename='js/contact/account_dropdown.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='js/contact/burger_menu_dropdown.js') }}"></script>
+    <title>Contact Me</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="left-side">
+            <div class="burger-menu">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <div class="line-3"></div>
+            </div>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="{{ url_for('home') }}" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="{{ url_for('about') }}" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="{{ url_for('portfolio') }}" class="nav__link">Portfolio</a></li>
+                    <li class="nav__item"><a href="{{ url_for('diary') }}" class="nav__link">Diary</a></li>
+                    <!--<li class="nav__item"><a href="{{ url_for('blog') }}" class="nav__link">Blog</a></li>-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="title">Contact</div>
+        <div class="title-info">I'll get back to you soon!</div>
+        <form action="{{ url_for('contact') }}" method="POST" class="form">
+            <div class="input-group">
+                <input type="text" name="first_name" id="first-name" placeholder="First name" required>
+                <label for="first-name">First name</label>
+            </div>
+            <div class="input-group">
+                <input type="text" name="last_name" id="last-name" placeholder="Last name" required>
+                <label for="last-name">Last name</label>
+            </div>
+            <div class="input-group">
+                <input type="email" name="e-mail" id="e-mail" placeholder="e-mail" required>
+                <label for="e-mail">e-mail</label>
+            </div>
+            <div class="textarea-group">
+                <textarea name="message" id="message" rows="5" placeholder="Message" required></textarea>
+                <label for="message">Message</label>
+            </div>
+            <div class="button-div">
+                <button type="submit">Send</button>
+            </div>
+        </form>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            <ul class="flashes">
+              {% for category, message in messages %}
+                <li class="{{ category }}">{{ message }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+    </main>
+    
+    <footer>
+        <a href="#" target="_blank"><img class="social-media-img" src="{{ url_for('static', filename='img/social_media/github.svg') }}" alt="GitHub"></a>
+        <a href="#" target="_blank"><img class="social-media-img" src="{{ url_for('static', filename='img/social_media/instagram.svg') }}" alt="Instagram"></a>
+        <a href="#" target="_blank"><img class="social-media-img" src="{{ url_for('static', filename='img/social_media/linkedin.svg') }}" alt="LinkedIn"></a>
+        <a href="#" target="_blank"><img class="social-media-img" src="{{ url_for('static', filename='img/social_media/twitter.svg') }}" alt="Twitter"></a>
+    </footer>
+</body>
+</html>
